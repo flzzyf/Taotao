@@ -614,7 +614,7 @@
                 });
             }
         });
-		
+		<!--
 		// 图片上传
 		jQuery(function() {
 		    var $ = jQuery,
@@ -716,7 +716,7 @@
 		        $( '#'+file.id ).find('.progress').remove();
 		    });
 		});
-		
+		 -->
 
 		
 	</script>
