@@ -1,43 +1,63 @@
-2017-12-06 11:30:03,461 [http-bio-8080-exec-1] [org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor]-[DEBUG] Written [[com.taotao.common.pojo.ZTreeNode@6ab753b9, com.taotao.common.pojo.ZTreeNode@7d465615, com.taotao.common.pojo.ZTreeNode@1e7c544e, com.taotao.common.pojo.ZTreeNode@222f417d, com.taotao.common.pojo.ZTreeNode@7255f41a, com.taotao.common.pojo.ZTreeNode@3decf2bb, com.taotao.common.pojo.ZTreeNode@41ce0f6c, com.taotao.common.pojo.ZTreeNode@19b29a81, com.taotao.common.pojo.ZTreeNode@449a5889, com.taotao.common.pojo.ZTreeNode@1eb9038b, com.taotao.common.pojo.ZTreeNode@2fbdda5f, com.taotao.common.pojo.ZTreeNode@22d63bbb, com.taotao.common.pojo.ZTreeNode@341e6178, com.taotao.common.pojo.ZTreeNode@626d992b, com.taotao.common.pojo.ZTreeNode@2343c81b, com.taotao.common.pojo.ZTreeNode@305b342b, com.taotao.common.pojo.ZTreeNode@778996f9, com.taotao.common.pojo.ZTreeNode@79a3fde2, com.taotao.common.pojo.ZTreeNode@441df1dd]] as "application/json;charset=UTF-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@aea5b42]
-2017-12-06 11:30:03,462 [http-bio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet]-[DEBUG] Null ModelAndView returned to DispatcherServlet with name 'springmvc': assuming HandlerAdapter completed request handling
-2017-12-06 11:30:03,462 [http-bio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet]-[DEBUG] Successfully completed request
-2017-12-06 11:30:06,788 [http-bio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet]-[DEBUG] DispatcherServlet with name 'springmvc' processing POST request for [/item/cat/list.action]
-2017-12-06 11:30:06,788 [http-bio-8080-exec-1] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]-[DEBUG] Looking up handler method for path /item/cat/list.action
-2017-12-06 11:30:06,789 [http-bio-8080-exec-1] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]-[DEBUG] Returning handler method [public java.util.List<com.taotao.common.pojo.ZTreeNode> com.taotao.manager.controller.ItemCatController.getItemCatList(java.lang.Long) throws java.lang.Exception]
-2017-12-06 11:30:06,789 [http-bio-8080-exec-1] [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean 'itemCatController'
-2017-12-06 11:30:06,790 [http-bio-8080-exec-1] [org.springframework.jdbc.datasource.DataSourceTransactionManager]-[DEBUG] Creating new transaction with name [com.taotao.manager.service.ItemCatService.queryListByWhere]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
-2017-12-06 11:30:06,790 [http-bio-8080-exec-1] [org.springframework.jdbc.datasource.DataSourceTransactionManager]-[DEBUG] Acquired Connection [com.mysql.jdbc.JDBC4Connection@7c8a1294] for JDBC transaction
-2017-12-06 11:30:06,791 [http-bio-8080-exec-1] [org.springframework.jdbc.datasource.DataSourceUtils]-[DEBUG] Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@7c8a1294] read-only
-2017-12-06 11:30:06,793 [http-bio-8080-exec-1] [org.springframework.jdbc.datasource.DataSourceTransactionManager]-[DEBUG] Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@7c8a1294] to manual commit
-2017-12-06 11:30:06,794 [http-bio-8080-exec-1] [org.mybatis.spring.SqlSessionUtils]-[DEBUG] Creating a new SqlSession
-2017-12-06 11:30:06,795 [http-bio-8080-exec-1] [org.mybatis.spring.SqlSessionUtils]-[DEBUG] Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@36b68993]
-2017-12-06 11:30:06,795 [http-bio-8080-exec-1] [org.mybatis.spring.transaction.SpringManagedTransaction]-[DEBUG] JDBC Connection [com.mysql.jdbc.JDBC4Connection@7c8a1294] will be managed by Spring
-2017-12-06 11:30:06,796 [http-bio-8080-exec-1] [com.taotao.manager.mapper.TbItemCatMapper.select]-[DEBUG] ==>  Preparing: SELECT SORT_ORDER SORTORDER,CREATE_TIME CREATETIME,ID,NAME,STATUS,IS_PARENT ISPARENT,PARENT_ID PARENTID,UPDATE_TIME UPDATETIME FROM tb_item_cat WHERE PARENT_ID = ? 
-2017-12-06 11:30:06,796 [http-bio-8080-exec-1] [com.taotao.manager.mapper.TbItemCatMapper.select]-[DEBUG] ==> Parameters: 74(Long)
-2017-12-06 11:30:06,799 [http-bio-8080-exec-1] [com.taotao.manager.mapper.TbItemCatMapper.select]-[DEBUG] <==      Total: 5
-2017-12-06 11:30:06,799 [http-bio-8080-exec-1] [org.mybatis.spring.SqlSessionUtils]-[DEBUG] Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@36b68993]
-2017-12-06 11:30:06,799 [http-bio-8080-exec-1] [org.mybatis.spring.SqlSessionUtils]-[DEBUG] Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@36b68993]
-2017-12-06 11:30:06,799 [http-bio-8080-exec-1] [org.mybatis.spring.SqlSessionUtils]-[DEBUG] Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@36b68993]
-2017-12-06 11:30:06,799 [http-bio-8080-exec-1] [org.mybatis.spring.SqlSessionUtils]-[DEBUG] Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@36b68993]
-2017-12-06 11:30:06,799 [http-bio-8080-exec-1] [org.springframework.jdbc.datasource.DataSourceTransactionManager]-[DEBUG] Initiating transaction commit
-2017-12-06 11:30:06,799 [http-bio-8080-exec-1] [org.springframework.jdbc.datasource.DataSourceTransactionManager]-[DEBUG] Committing JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@7c8a1294]
-2017-12-06 11:30:06,803 [http-bio-8080-exec-1] [org.springframework.jdbc.datasource.DataSourceUtils]-[DEBUG] Resetting read-only flag of JDBC Connection [com.mysql.jdbc.JDBC4Connection@7c8a1294]
-2017-12-06 11:30:06,803 [http-bio-8080-exec-1] [org.springframework.jdbc.datasource.DataSourceTransactionManager]-[DEBUG] Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@7c8a1294] after transaction
-2017-12-06 11:30:06,803 [http-bio-8080-exec-1] [org.springframework.jdbc.datasource.DataSourceUtils]-[DEBUG] Returning JDBC Connection to DataSource
-2017-12-06 11:30:06,804 [http-bio-8080-exec-1] [org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdviceChain]-[DEBUG] Invoking ResponseBodyAdvice chain for body=[com.taotao.common.pojo.ZTreeNode@4f95d2f4, com.taotao.common.pojo.ZTreeNode@47f46561, com.taotao.common.pojo.ZTreeNode@6fb1b8bc, com.taotao.common.pojo.ZTreeNode@252181d, com.taotao.common.pojo.ZTreeNode@63b178d1]
-2017-12-06 11:30:06,804 [http-bio-8080-exec-1] [org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdviceChain]-[DEBUG] After ResponseBodyAdvice chain body=[com.taotao.common.pojo.ZTreeNode@4f95d2f4, com.taotao.common.pojo.ZTreeNode@47f46561, com.taotao.common.pojo.ZTreeNode@6fb1b8bc, com.taotao.common.pojo.ZTreeNode@252181d, com.taotao.common.pojo.ZTreeNode@63b178d1]
-2017-12-06 11:30:06,804 [http-bio-8080-exec-1] [org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor]-[DEBUG] Written [[com.taotao.common.pojo.ZTreeNode@4f95d2f4, com.taotao.common.pojo.ZTreeNode@47f46561, com.taotao.common.pojo.ZTreeNode@6fb1b8bc, com.taotao.common.pojo.ZTreeNode@252181d, com.taotao.common.pojo.ZTreeNode@63b178d1]] as "application/json;charset=UTF-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@aea5b42]
-2017-12-06 11:30:06,804 [http-bio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet]-[DEBUG] Null ModelAndView returned to DispatcherServlet with name 'springmvc': assuming HandlerAdapter completed request handling
-2017-12-06 11:30:06,804 [http-bio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet]-[DEBUG] Successfully completed request
-2017-12-06 11:30:07,659 [http-bio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet]-[DEBUG] DispatcherServlet with name 'springmvc' processing POST request for [/item/cat/list.action]
-2017-12-06 11:30:07,659 [http-bio-8080-exec-1] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]-[DEBUG] Looking up handler method for path /item/cat/list.action
-2017-12-06 11:30:07,660 [http-bio-8080-exec-1] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]-[DEBUG] Returning handler method [public java.util.List<com.taotao.common.pojo.ZTreeNode> com.taotao.manager.controller.ItemCatController.getItemCatList(java.lang.Long) throws java.lang.Exception]
-2017-12-06 11:30:07,660 [http-bio-8080-exec-1] [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean 'itemCatController'
-2017-12-06 11:30:07,660 [http-bio-8080-exec-1] [org.springframework.jdbc.datasource.DataSourceTransactionManager]-[DEBUG] Creating new transaction with name [com.taotao.manager.service.ItemCatService.queryListByWhere]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
-2017-12-06 11:30:07,660 [http-bio-8080-exec-1] [org.springframework.jdbc.datasource.DataSourceTransactionManager]-[DEBUG] Acquired Connection [com.mysql.jdbc.JDBC4Connection@7c8a1294] for JDBC transaction
-2017-12-06 11:30:07,660 [http-bio-8080-exec-1] [org.springframework.jdbc.datasource.DataSourceUtils]-[DEBUG] Setting JDBC Connection [com.mysql.jdbc.JDBC4Connection@7c8a1294] read-only
-2017-12-06 11:30:07,660 [http-bio-8080-exec-1] [org.springframework.jdbc.datasource.DataSourceTransactionManager]-[DEBUG] Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@7c8a1294] to manual commit
-2017-12-06 11:30:07,661 [http-bio-8080-exec-1] [org.mybatis.spring.SqlSessionUtils]-[DEBUG] Creating a new SqlSession
-2017-12-06 11:30:07,661 [http-bio-8080-exec-1] [org.mybatis.spring.SqlSessionUtils]-[DEBUG] Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@78ac6ab]
-2017-12-06 11:30:07,661 [http-bio-8080-exec-1] [org.mybatis.spring.transaction.SpringManagedTransaction]-[DEBUG] JDBC Connection [com.mysql.jdbc.JDBC4Connection@7c8a1294] will be managed by Spring
-2017-12-06 11:30:07,661 [http-bio-8080-exec-1] [com.taotao.manager.mapper.TbItemCatMapper.select]-[DEBUG] ==>  Preparing: SELECT SORT_ORDER SORTORDER,CREATE_TIME CREATETIME,ID,NAME,STATUS,IS_PARENT ISPARENT,PARENT_ID PARENTID,UPDATE_TIME UPDATETIME FROM tb_item_cat WHERE PARENT_ID = ? 
+2017-12-06 12:02:19,124 [localhost-startStop-1] [org.springframework.beans.factory.annotation.InjectionMetadata]-[DEBUG] Registered injected element on class [com.taotao.manager.service.PicService]: AutowiredFieldElement for private java.lang.String com.taotao.manager.service.PicService.FTP_BASE_PATH
+2017-12-06 12:02:19,124 [localhost-startStop-1] [org.springframework.beans.factory.annotation.InjectionMetadata]-[DEBUG] Registered injected element on class [com.taotao.manager.service.PicService]: AutowiredFieldElement for private java.lang.String com.taotao.manager.service.PicService.IMAGE_BASE_URL
+2017-12-06 12:02:19,124 [localhost-startStop-1] [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Eagerly caching bean 'picService' to allow for resolving potential circular references
+2017-12-06 12:02:19,127 [localhost-startStop-1] [org.springframework.beans.factory.annotation.InjectionMetadata]-[DEBUG] Processing injected method of bean 'picService': AutowiredFieldElement for private java.lang.String com.taotao.manager.service.PicService.FTP_ADDRESS
+2017-12-06 12:02:19,131 [localhost-startStop-1] [org.springframework.web.context.support.XmlWebApplicationContext]-[WARN] Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'picController': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.taotao.manager.service.PicService com.taotao.manager.controller.PicController.picService; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'picService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private java.lang.String com.taotao.manager.service.PicService.FTP_ADDRESS; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'FTP_ADDRESS' in string value "${FTP_ADDRESS}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1202)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.taotao.manager.service.PicService com.taotao.manager.controller.PicController.picService; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'picService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private java.lang.String com.taotao.manager.service.PicService.FTP_ADDRESS; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'FTP_ADDRESS' in string value "${FTP_ADDRESS}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:558)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 22 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'picService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private java.lang.String com.taotao.manager.service.PicService.FTP_ADDRESS; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'FTP_ADDRESS' in string value "${FTP_ADDRESS}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1202)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1127)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1051)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:949)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:530)
+	... 24 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private java.lang.String com.taotao.manager.service.PicService.FTP_ADDRESS; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'FTP_ADDRESS' in string value "${FTP_ADDRESS}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:558)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 35 more
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'FTP_ADDRESS' in string value "${FTP_ADDRESS}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:174)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.beans.factory.config.PropertyPlaceholderConfigurer$PlaceholderResolvingStringValueResolver.resolveStringValue(PropertyPlaceholderConfigurer.java:259)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:800)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:962)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:949)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:530)
+	... 37 more
+2017-12-06 12:02:19,137 [localhost-startStop-1] [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@765fcdd8: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,itemController,picController,itemCatController,picService,itemParamService,itemDescService,itemService,itemCatService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,transactionManager,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor,tbItemCatMapper,tbItemDescMapper,tbItemParamMapper,tbItemMapper]; root of factory hierarchy
