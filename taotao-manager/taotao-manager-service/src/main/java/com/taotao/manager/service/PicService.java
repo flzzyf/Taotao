@@ -32,6 +32,14 @@ public class PicService {
 	private String IMAGE_BASE_URL;
 
 	public TaotaoResult uploadPicture(MultipartFile uploadFile) {
+		
+		FTP_ADDRESS = "10.211.55.3";
+		FTP_PORT = 22;
+		FTP_USERNAME = "ftpuser";
+		FTP_PASSWORD = "root";
+		FTP_BASE_PATH = "/home/ftpuser/images";
+		IMAGE_BASE_URL = "http://10.211.55.3";
+		
 		//判断上传图片是否为空
 		if (null == uploadFile || uploadFile.isEmpty()) {
 			return TaotaoResult.build(500, "上传图片为空", "");

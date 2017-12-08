@@ -39,7 +39,7 @@ public class FTPTest {
 		ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
 		// 第一个参数：服务器端文档名
 		// 第二个参数：上传文档的inputStream
-		ftpClient.storeFile("hello1.jpg", inputStream);
+		ftpClient.storeFile("hello1.png", inputStream);
 		// 关闭连接
 		ftpClient.logout();
 	}

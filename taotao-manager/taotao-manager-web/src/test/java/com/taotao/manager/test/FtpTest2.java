@@ -18,13 +18,8 @@ public class FtpTest2 {
 	static String password = "root";
 	static String host = "10.211.55.3";
 	static String file ="/Users/zyf/Desktop/master_of_the_sun_by_yakovlev_vad-dbmoohw.png";
-    
-    /** 
-     * FTP上传单个文件测试 
-     */ 
-    public static void testUpload() { 
-    	
 
+    public static void testUpload() { 
     	
         FTPClient ftpClient = new FTPClient(); 
         FileInputStream fis = null; 
@@ -43,7 +38,7 @@ public class FtpTest2 {
             ftpClient.setControlEncoding("GBK"); 
             //设置文件类型（二进制） 
             ftpClient.setFileType(FTPClient.BINARY_FILE_TYPE); 
-            ftpClient.storeFile("horse2.png", fis); 
+            ftpClient.storeFile("horse3.png", fis); 
         } catch (IOException e) { 
             e.printStackTrace(); 
             throw new RuntimeException("FTP客户端出错！", e); 

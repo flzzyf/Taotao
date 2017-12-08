@@ -42,7 +42,8 @@ public class FtpUtils {
 		FTPClient ftp = new FTPClient();
 		try {
 			int reply;
-			ftp.connect(host, port);// 连接FTP服务器
+			//ftp.connect(host, port);// 连接FTP服务器
+			ftp.connect(host);// 连接FTP服务器
 			// 如果采用默认端口，可以使用ftp.connect(host)的方式直接连接FTP服务器
 			ftp.login(username, password);// 登录
 			reply = ftp.getReplyCode();
@@ -50,7 +51,10 @@ public class FtpUtils {
 				ftp.disconnect();
 				return result;
 			}
+			
+			ftp.changeWorkingDirectory("/images/qwe/"); 
 			//切换到上传目录
+			/*
 			if (!ftp.changeWorkingDirectory(basePath+filePath)) {
 				//如果目录不存在创建目录
 				String[] dirs = filePath.split("/");
@@ -66,7 +70,7 @@ public class FtpUtils {
 						}
 					}
 				}
-			}
+			}*/
 			//设置上传文件的类型为二进制类型
 			ftp.setFileType(FTP.BINARY_FILE_TYPE);
 			//上传文件
@@ -140,16 +144,5 @@ public class FtpUtils {
 		}
 		return result;
 	}
-	
-	public static void main(String[] args) {
-/*		try {  
-	        //FileInputStream in=new FileInputStream(new File("D:\\temp\\image\\gaigeming.jpg"));  
-	        //boolean flag = uploadFile("192.168.25.133", 21, "ftpuser", "ftpuser", "/home/ftpuser/www/images","/2015/01/21", "gaigeming.jpg", in);  
-			FileInputStream inputStream = new FileInputStream(new File("/Users/zyf/Desktop/master_of_the_sun_by_yakovlev_vad-dbmoohw.png"));
-			boolean flag = FtpUtils.uploadFile("10.211.55.3", 22, "ftpuser", "root", "/home/ftpuser/www/images", "/2017/11/22", "hello.jpg", inputStream);
-			System.out.println(flag);  
-	    } catch (FileNotFoundException e) {  
-	        e.printStackTrace();  
-	    }  */
-	}
+
 }

@@ -192,21 +192,27 @@
 									<div class="col-sm-12">
 										<div class="form-group">
 											<label class="col-sm-2 control-label">商品图片：</label>
-
-											<!--dom结构部分
-											<div id="uploader-demo">-->
-											    <!--用来存放item
-											    <div id="fileList" class="uploader-list"></div>
-											    <div id="filePicker" class="webuploader-pick">选择图片</div>
-											</div>-->
-
-
+								
+											
 											<!--dom结构部分-->
 											<div id="uploader-demo">
 											    <!--用来存放item-->
 											    <div id="fileList" class="uploader-list"></div>
-											    <div id="filePicker">选择图片</div>
+											    <div id="filePicker" class="webuploader-pick">选择图片</div>
 											</div>
+											
+											<div id="uploader-logo"> 
+													<div id="imgPicker">添加图片</div> 
+													<div id="fileList" class="uploader-list"></div> 
+													<div class="js-count-tip hide"><p>已选择<span></span>张图片！</p></div> 
+													<div class="ui-btnBar js-btnBar hide"> 
+														<button id="uploadBtn" class="button button-primary">上传</button> 
+													<div id="continueBtn" class="js-continueBtn">继续添加</div> 
+													<button id="cancelBtn" class="button button-cancel">取消</button> 
+												</div> 
+											</div>
+											
+											
 										</div>
 									</div>
 								</div>
@@ -636,7 +642,6 @@
 		        auto: true,
 
 		        // swf文件路径
-		        //swf: '${baseurl}/assets/lib/webuploader/js/Uploader.swf',
 		        swf: '${baseurl}/webuploader-0.1.5/Uploader.swf',
 
 		        // 文件接收服务端。

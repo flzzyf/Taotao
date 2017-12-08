@@ -25,7 +25,7 @@ public class testFtpUtils {
 	@Test
 	public static void testFtpUtils() throws Exception {
 		FileInputStream inputStream = new FileInputStream(new File("/Users/zyf/Desktop/master_of_the_sun_by_yakovlev_vad-dbmoohw.png"));
-		FtpUtils.uploadFile("10.211.55.3", 22, "ftpuser", "root", "/home/ftpuser/images", "/2016/11/07", "hello.jpg", inputStream);
+		FtpUtils.uploadFile("10.211.55.3", 22, "ftpuser", "root", "", "/images/", "helloj.png", inputStream);
 	}
 	
 
