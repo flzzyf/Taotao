@@ -8,14 +8,12 @@
  */
 (function( root, factory ) {
     var modules = {},
-    		
 
         // 内部require, 简单不完全实现。
         // https://github.com/amdjs/amdjs-api/wiki/require
         _require = function( deps, callback ) {
             var args, len, i;
 
-            console.log("qwe");
             // 如果deps不是数组，则直接返回指定module
             if ( typeof deps === 'string' ) {
                 return getModule( deps );
@@ -4693,6 +4691,9 @@
                 } catch( err ) {
                 }
     
+                me.dndOver = false;
+                me.elem.removeClass( prefix + 'over' );
+    
                 if ( data ) {
                     return;
                 }
@@ -4703,8 +4704,6 @@
                     }) );
                 });
     
-                me.dndOver = false;
-                me.elem.removeClass( prefix + 'over' );
                 return false;
             },
     
@@ -4780,7 +4779,7 @@
                 if (!elem) {
                     return;
                 }
-                
+    
                 elem.off( 'dragenter', this.dragEnterHandler );
                 elem.off( 'dragover', this.dragOverHandler );
                 elem.off( 'dragleave', this.dragLeaveHandler );
@@ -6330,6 +6329,8 @@
                         height: this.height
                     };
     
+                    debugger;
+    
                     // 读取meta信息。
                     if ( !me._metas && 'image/jpeg' === me.type ) {
                         Util.parseMeta( me._blob, function( error, ret ) {
@@ -6475,12 +6476,12 @@
     
                 // setter
                 if ( val ) {
-                    this._meta = val;
+                    this._metas = val;
                     return this;
                 }
     
                 // getter
-                return this._meta;
+                return this._metas;
             },
     
             destroy: function() {
