@@ -42,8 +42,7 @@ public class FtpUtils {
 		FTPClient ftp = new FTPClient();
 		try {
 			int reply;
-			//ftp.connect(host, port);// 连接FTP服务器
-			ftp.connect(host);// 连接FTP服务器
+			ftp.connect(host, port);// 连接FTP服务器
 			// 如果采用默认端口，可以使用ftp.connect(host)的方式直接连接FTP服务器
 			ftp.login(username, password);// 登录
 			reply = ftp.getReplyCode();
@@ -52,7 +51,7 @@ public class FtpUtils {
 				return result;
 			}
 			
-			ftp.changeWorkingDirectory("/images/qwe/"); 
+			ftp.changeWorkingDirectory(filePath); 
 			//切换到上传目录
 			/*
 			if (!ftp.changeWorkingDirectory(basePath+filePath)) {

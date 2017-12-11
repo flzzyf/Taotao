@@ -34,10 +34,10 @@ public class PicService {
 	public TaotaoResult uploadPicture(MultipartFile uploadFile) {
 		
 		FTP_ADDRESS = "10.211.55.3";
-		FTP_PORT = 22;
+		FTP_PORT = 21;
 		FTP_USERNAME = "ftpuser";
 		FTP_PASSWORD = "root";
-		FTP_BASE_PATH = "/home/ftpuser/images";
+		FTP_BASE_PATH = "/images";
 		IMAGE_BASE_URL = "http://10.211.55.3";
 		
 		//判断上传图片是否为空
