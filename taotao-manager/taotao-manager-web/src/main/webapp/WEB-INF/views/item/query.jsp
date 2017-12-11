@@ -721,13 +721,9 @@
 		        $( '#'+file.id ).find('.progress').remove();
 		    });
 		});
-		 
-
+		
 		
 	</script>
-	
-
-
 
 </body>
 </html>
