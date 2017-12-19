@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.sun.tools.javac.util.List;
 
 public class ItemCat {
 	//转换成json数据时使用u作为key

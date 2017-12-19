@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 
-import com.sun.tools.javac.util.List;
 
 /**
  * 查询分类列表返回值
