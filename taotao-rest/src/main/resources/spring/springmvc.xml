@@ -19,8 +19,8 @@
 	<!-- 开启aop，对类代理，这是spring的东西
 	<aop:config proxy-target-class="true"></aop:config> -->
 	
-	<!-- 定义注解驱动
-	<mvc:annotation-driven></mvc:annotation-driven> -->
+	<!-- 定义注解驱动 -->
+	<mvc:annotation-driven></mvc:annotation-driven>
 	
 	<!-- 定义试图解析器
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
