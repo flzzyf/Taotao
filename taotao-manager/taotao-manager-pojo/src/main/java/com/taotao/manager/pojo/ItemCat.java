@@ -1,4 +1,6 @@
-import java.util.ArrayList;
+package com.taotao.manager.pojo;
+
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -11,7 +13,7 @@ public class ItemCat {
 	private String name;
 	
 	@JsonProperty("i")
-	private ArrayList item;
+	private List<?> item;
 
 	public String getUrl() {
 		return url;
@@ -29,12 +31,12 @@ public class ItemCat {
 		this.name = name;
 	}
 
-	public ArrayList getItem() {
+	public List<?> getItem() {
 		return item;
 	}
 
-	public void setItem(ArrayList arrayList) {
-		this.item = arrayList;
+	public void setItem(List<?> item) {
+		this.item = item;
 	}
 	
 	

@@ -1,13 +1,16 @@
+package com.taotao.rest.service;
 
-import java.util.ArrayList;
+import java.util.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.github.abel533.entity.Example;
 import com.github.abel533.entity.Example.Criteria;
-import com.sun.tools.javac.util.List;
+
 import com.taotao.manager.mapper.TbItemCatMapper;
+import com.taotao.manager.pojo.ItemCat;
+import com.taotao.manager.pojo.ItemCatResult;
 import com.taotao.manager.pojo.TbItemCat;
 
 @Service
@@ -17,6 +20,9 @@ public class ItemCatService {
 	private TbItemCatMapper itemCatMapper;
 	
 	public ItemCatResult queryAllCategory() throws Exception {
+		
+		for(int i = 0; i < 20; i++)
+			System.out.println("queryAllCategory()");
 		
 		ItemCatResult result = new ItemCatResult();
 		result.setData(getItemCatList(0l));
@@ -31,13 +37,15 @@ public class ItemCatService {
 	 * @param parentid
 	 * @return
 	 */
-	private ArrayList getItemCatList(long parentid) {
+	private List<?> getItemCatList(long parentid) {
 		Example example = new Example(TbItemCat.class);
 		Criteria criteria = example.createCriteria();
 		//查询parentid为0的分类信息
 		criteria.andEqualTo("parentId", parentid);
-		List<TbItemCat> list = (List<TbItemCat>) itemCatMapper.selectByExample(example);
-		ArrayList dataList = new ArrayList();
+		List<TbItemCat> list = itemCatMapper.selectByExample(example);
+		//List dataList = new ArrayList();###
+		List dataList = null;
+		
 		for (TbItemCat tbItemCat : list) {
 			//判断是否为父节点
 			if (tbItemCat.getIsParent()) {

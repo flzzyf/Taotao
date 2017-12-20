@@ -1,3 +1,4 @@
+package com.taotao.rest.service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -13,6 +14,8 @@ import com.sun.xml.internal.xsom.impl.scd.Iterators.Map;
 import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.common.utils.HttpClientUtils;
 import com.taotao.common.utils.JsonUtils;
+import com.taotao.manager.mapper.TbContentMapper;
+import com.taotao.manager.pojo.TbContent;
 
 @Service
 public class ContentService {

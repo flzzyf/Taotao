@@ -1,3 +1,4 @@
+package com.taotao.manager.pojo;
 
 
 import java.sql.Date;
@@ -5,8 +6,6 @@ import java.sql.Date;
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import com.taotao.manager.pojo.BasePojo;
 
 @Table(name = "tb_content")
 public class TbContent extends BasePojo{

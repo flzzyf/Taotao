@@ -1,3 +1,5 @@
+package com.taotao.rest.controller;
+
 
 import java.awt.List;
 
@@ -9,6 +11,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.common.utils.ExceptionUtils;
+import com.taotao.manager.pojo.TbContent;
+import com.taotao.rest.service.ContentService;
 
 @Controller
 @RequestMapping("/content")
